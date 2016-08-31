@@ -1,18 +1,20 @@
 ﻿@{
 
+    //Razor C# code to reverse a string
     var Output = "";
     if (IsPost)
     {
-        // Retrieve the numbers that the user entered.
+        // Retrieve the string that the user entered.
         var textIn = Request["textIn"];
 
 
-        // Convert the entered strings into integers numbers and add.
+        // Creates a new output string and feeds it each char from the input string starting from the last.
         var textOut = "";
         for (var c = textIn.Length - 1; c >= 0; c--)
         {
             textOut += textIn[c];
         }
+        // Output the resulting reversed string
         Output += "Reversed String: " + textOut;
     }
 }
@@ -75,12 +77,12 @@
     <p id="reversedString"></p>
 
     <script>
-       
+       @*jQuery code to reverse a string*@
             $('#jQSubmit').click(function () {
-                var o = $('#jQtextIn').val().split('').reverse();
-                $('#jQReversedString').html(o);
+                var o = $('#jQtextIn').val().split('').reverse().join('');
+                $('#jQReversedString').html("Reversed string: " + o);
             })
-        
+        @*JavaScript code to reverse a string*@
             function reverseString() {
                 var s = document.getElementById("s").value;
                 var o = '';
