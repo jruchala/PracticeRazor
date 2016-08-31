@@ -51,7 +51,7 @@
     <p>@Output</p>
 
     <hr />
-    <br /><br />
+  
 <p>Enter a string to reverse using jQuery.</p>
     <form action="" method="post">
         <p>
@@ -76,13 +76,9 @@
 
     <script>
        
-            $("#jQSubmit").click(function () {
-                var s = $("#jQtextIn").val();
-                var o = "";
-                for (var c = s.length - 1; c >= 0 ; c--) {
-                    o += s[c];
-                }
-                $("#jQReversedString").html(o);
+            $('#jQSubmit').click(function () {
+                var o = $('#jQtextIn').val().split('').reverse();
+                $('#jQReversedString').html(o);
             })
         
             function reverseString() {
