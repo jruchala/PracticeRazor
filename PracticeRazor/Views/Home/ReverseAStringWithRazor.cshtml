@@ -15,7 +15,7 @@
             textOut += textIn[c];
         }
         // Output the resulting reversed string
-        Output += "Reversed String: " + textOut;
+        Output += "Reversed string: " + textOut;
     }
 }
 
@@ -38,44 +38,58 @@
         }
     </style>
     <script src="~/Scripts/jquery-1.10.2.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
 </head>
 <body>
-    <p>Enter a string to reverse using Razor.</p>
-    <form action="" method="post">
-        <p>
-            <label for="textIn">String:</label>
-            <input type="text" name="textIn" />
-        </p>
-        
-        <p><input type="submit" value="Reverse" /></p>
-    </form>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-4">
+                <p>Enter a string to reverse using <br />Razor.</p>
+                <form action="" method="post">
+                    <p>
+                        <label for="textIn">String:</label>
+                        <input type="text" name="textIn" />
+                    </p>
 
-    <p>@Output</p>
+                    <p><input type="submit" value="Reverse" /></p>
+                </form>
 
-    <hr />
-  
-<p>Enter a string to reverse using jQuery.</p>
-    <form action="" method="post">
-        <p>
-            <label id="textIn">String:</label>
-            <input type="text" id="jQtextIn" />
-        </p>
-        
-        <button type="button" id="jQSubmit">Reverse</button>
-    </form>
+                <p>@Output</p>
+                @*begin modal to display code*@
+                <div class="container">
 
-    <p id="jQReversedString"></p>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <p>Enter a string to reverse using jQuery.</p>
+                <form action="" method="post">
+                    <p>
+                        <label id="textIn">String:</label>
+                        <input type="text" id="jQtextIn" />
+                    </p>
 
-    <hr />
-    <p>Reverse a string using JavaScript</p>
-    <form>
-        <input type="text" id="s" />
-        <button type="button" id="submit" onclick="reverseString()">submit</button>
+                    <button type="button" id="jQSubmit">Reverse</button>
+                </form>
 
+                <p id="jQReversedString"></p>
 
-    </form>
-    <p id="reversedString"></p>
+                <hr />
 
+            </div>
+            <div class="col-sm-4">
+                <p>Enter a string to reverse using JavaScript.</p>
+                <form>
+                    <p>
+                        <label id="textIn">String:</label>
+                        <input type="text" id="s" />
+                    </p>
+                        <button type="button" id="submit" onclick="reverseString()">Reverse</button>
+                    
+                </form>
+                <p id="reversedString"></p>
+            </div>
+        </div>
+    </div>
     <script>
        @*jQuery code to reverse a string*@
             $('#jQSubmit').click(function () {
