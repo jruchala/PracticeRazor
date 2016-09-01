@@ -272,6 +272,8 @@
     <Content Include="Views\Home\PostTest.cshtml" />
     <Content Include="Views\Home\AddNumbers.cshtml" />
     <Content Include="Views\Home\ReverseAStringWithRazor.cshtml" />
+    <Content Include="Views\Home\Result.cshtml" />
+    <Content Include="Views\Home\RegMethod.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
