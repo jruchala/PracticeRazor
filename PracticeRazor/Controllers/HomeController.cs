@@ -17,6 +17,15 @@ namespace PracticeRazor.Controllers
         [HttpPost]
         public ActionResult Result(string text)
         {
+            char[] userInput = text.ToCharArray();
+            string stringHolder = String.Empty;
+            for (int i = userInput.Length - 1; i >= 0; i--)
+            {
+                stringHolder += userInput[i];
+            }
+
+            ViewBag.Reverse = stringHolder;
+
             return View();
         }
 
